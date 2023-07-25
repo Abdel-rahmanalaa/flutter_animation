@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animation/implicit_animations/animated_align_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_container_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_opacity_widget.dart';
+import 'package:flutter_animation/implicit_animations/animated_padding_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_text_style_widget.dart';
 
 void main() {
@@ -80,6 +81,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       builder: (context) => const AnimatedOpacityWidget()));
             },
             child: const Text('Animated Opacity Widget'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AnimatedPaddingWidget()));
+            },
+            child: const Text('Animated Padding Widget'),
           ),
         ],
       ),
