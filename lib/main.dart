@@ -4,6 +4,7 @@ import 'package:flutter_animation/implicit_animations/animated_container_widget.
 import 'package:flutter_animation/implicit_animations/animated_opacity_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_padding_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_physical_model_widget.dart';
+import 'package:flutter_animation/implicit_animations/animated_postioned_directional.widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_postioned_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_text_style_widget.dart';
 
@@ -111,6 +112,16 @@ class _MyHomePageState extends State<MyHomePage> {
                       builder: (context) => const AnimatedPostionedWidget()));
             },
             child: const Text('Animated Postioned Widget'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          const AnimatedPostionedDirectionalWidget()));
+            },
+            child: const Text('Animated Postioned Directional Widget'),
           ),
         ],
       ),
