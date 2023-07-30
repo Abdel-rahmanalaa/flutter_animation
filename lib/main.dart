@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/implicit_animations/animated_align_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_container_widget.dart';
+import 'package:flutter_animation/implicit_animations/animated_cross_fade_widgets/animated_cross_fade_widget.dart';
+import 'package:flutter_animation/implicit_animations/animated_list_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_opacity_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_padding_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_physical_model_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_postioned_directional.widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_postioned_widget.dart';
+import 'package:flutter_animation/implicit_animations/animated_switcher_widget.dart';
 import 'package:flutter_animation/implicit_animations/animated_text_style_widget.dart';
 
 void main() {
@@ -46,6 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Flutter Animations'),
       ),
+
+      // ToDo (List of Widgets and Strings) and make Listview to Listview.builder //
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
@@ -122,6 +127,33 @@ class _MyHomePageState extends State<MyHomePage> {
                           const AnimatedPostionedDirectionalWidget()));
             },
             child: const Text('Animated Postioned Directional Widget'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AnimatedCrossFadeWidget()));
+            },
+            child: const Text('Animated Cross Fade Widget'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AnimatedSwitcherWidget()));
+            },
+            child: const Text('Animated Switcher Widget'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const AnimatedListWidget()));
+            },
+            child: const Text('Animated List Widget'),
           ),
         ],
       ),
